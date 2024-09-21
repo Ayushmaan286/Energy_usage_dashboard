@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Energy Usage Dashboard</title>
+    <link rel="stylesheet" href="2.css">
+</head>
+<body>
+ 
+    <header>
+        <h1>Energy Usage Dashboard</h1>
+        <p>Monitor your energy consumption in real-time and receive tips for energy efficiency.</p>
+    </header>
+
+
+    <section id="dashboard">
+        <div class="container">
+          
+            <div class="form-container">
+                <h2>Log Your Energy Usage</h2>
+                <form id="energy-form" class="log-form">
+                    <div class="form-group">
+                        <label for="energy-type">Energy Type</label>
+                        <select id="energy-type">
+                            <option value="Electricity">Electricity</option>
+                            <option value="Gas">Gas</option>
+                            <option value="Solar">Solar</option>
+                            <option value="Wind">Wind</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="energy-usage">Usage (kWh)</label>
+                        <input type="number" id="energy-usage" placeholder="Enter amount in kWh" required>
+                    </div>
+
+                    <button type="submit" class="log-btn">Log Usage</button>
+                </form>
+            </div>
+
+           
+            <div class="logs-container">
+                <h2>Energy Logs</h2>
+                <div id="energy-logs"></div>
+            </div>
+
+          
+            <div class="chart-container">
+                <h2>Energy Usage Chart</h2>
+                <canvas id="usage-chart"></canvas>
+            </div>
+
+          
+            <div class="total-usage-container">
+                <h2 id="total-usage">Total Energy Usage: 0 kWh</h2>
+            </div>
+        </div>
+    </section>
+
+   
+    <section id="tips">
+        <h2>Energy Efficiency Tips</h2>
+        <div id="tips-container">
+            <ul>
+                <li>Turn off lights when not in use.</li>
+                <li>Unplug devices when not in use to avoid phantom loads.</li>
+                <li>Use energy-efficient appliances and light bulbs.</li>
+                <li>Seal air leaks to reduce heating and cooling costs.</li>
+            </ul>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="3.js"></script>
+</body>
+</html>
